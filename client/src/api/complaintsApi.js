@@ -7,3 +7,9 @@ const API = axios.create({
 export const createComplaint = (data) => {
   return API.post("/complaints", data);
 };
+
+export const getAllComplaints = (token) => {
+  return axios.get("/admin/complaints", {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+};

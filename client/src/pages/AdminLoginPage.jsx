@@ -19,7 +19,12 @@ function AdminLoginPage() {
         try{
             setLoading(true);
             const res = await adminConnect({password})
-            localStorage.setItem('admintoken', res.data.token)
+            console.log('dsa');
+            console.log(res.data);
+            
+            localStorage.setItem('admintoken', res.data)
+            console.log('asdfc');
+            
             navigate('/admin/complaints')
         } catch (err){
             setError('סיסמה שגויה, אין כניסה')

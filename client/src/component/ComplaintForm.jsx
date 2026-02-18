@@ -5,7 +5,7 @@ import { createComplaint } from '../api/complaintsApi';
 function ComplaintForm() {
  const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        category:' אוכל',
+        category:'אוכל',
         content:''
     });
     const [loading, setLoading] = useState(false);
@@ -31,9 +31,7 @@ function ComplaintForm() {
         }
         try {
             setLoading(true);
-            console.log(12345);
             await createComplaint(formData);
-            
             setSuccess(true);
             setFormData({
                 category:'אוכל',

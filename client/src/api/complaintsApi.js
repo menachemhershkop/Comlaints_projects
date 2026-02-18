@@ -15,8 +15,10 @@ export async function createComplaint(data){
   
 };
 
-export const getAllComplaints = (token) => {
-  return axios.get("/admin/complaints", {
+export async function getAllComplaints(token){
+  console.log('kcmsaopcijpodsa');
+  
+  return await axios.get("http://localhost:8080/api/complaints", {
     headers: { authorization: ` ${token}` }
   });
 };

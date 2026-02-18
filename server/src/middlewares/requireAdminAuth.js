@@ -1,7 +1,6 @@
 import jwt from 'jsonwebtoken';
 
 export default function checkToken(req, res, next){
-    console.log(req.headers);
     
     const authHeader = req.headers['authorization'];
     const token = authHeader;

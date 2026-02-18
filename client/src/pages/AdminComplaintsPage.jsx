@@ -30,10 +30,10 @@ function AdminComplaintsPage() {
       ? complaints
       : complaints.filter((c) => c.category === filter);
 
-     const categoryCounts = complaints.reduce((acc, curr) => {
-        acc[curr.category] = (acc[curr.category] || 0) + 1;
-        return acc;
-        }, {});
+    //  const categoryCounts = complaints.reduce((acc, curr) => {
+    //     acc[curr.category] = (acc[curr.category] || 0) + 1;
+    //     return acc;
+    //     }, {});
         
          const formatDate = (dateStr) => {
             const date = new Date(dateStr);
@@ -57,10 +57,10 @@ function AdminComplaintsPage() {
             <label>סינון לפי קטגוריה: </label>
             <select value={filter} onChange={(e) => setFilter(e.target.value)}>
               <option value="all">הכל</option>
-              <option value="אוכל">אוכל ({categoryCounts["אוכל"] || 0})</option>
-              <option value="ציוד">ציוד ({categoryCounts["ציוד"] || 0})</option>
-              <option value="פקודות">פקודות ({categoryCounts["פקודות"] || 0})</option>
-              <option value="אחר">אחר ({categoryCounts["אחר"] || 0})</option>
+              <option value="אוכל">אוכל </option>
+              <option value="ציוד">ציוד </option>
+              <option value="פקודות">פקודות </option>
+              <option value="אחר">אחר </option>
             </select>
           </div>
 
@@ -84,6 +84,7 @@ function AdminComplaintsPage() {
           </table>
         </>
       )}
+      1234
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 import { createComplaint } from '../api/complaintsApi';
 
@@ -34,7 +34,7 @@ function AdminLoginPage() {
       {error && <div className='error-message'>{error}</div>}
 
       <form onSubmit={handleSubmit}>
-        <input type="password" placeholder='סיסמה' value={password} onChange={(e)> setPassword(e.target.value)}/>
+        <input type="password" placeholder='סיסמה' value={password} onChange={(e)=> setPassword(e.target.value)}/>
         <button type='submit' disabled={loading}>
             {loading? 'התחברות' : 'מנסה להתחבר'}
         </button>

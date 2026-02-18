@@ -5,7 +5,7 @@ import { createComplaint } from '../api/complaintsApi';
 function SubmitComplaintPage() {
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
-        category: אוכל,
+        category:' אוכל',
         content:''
     });
     const [loading, setLoading] = useState(false);
@@ -68,6 +68,7 @@ function SubmitComplaintPage() {
             {loading ? 'שלח תלונה': 'שולח...'}
         </button>
       </form>
+      987
     </div>
   )
 }

@@ -14,7 +14,7 @@ function HomePage() {
     <div className='home-page'>
         <section className='intro'>
             <h1>מערכת קבלת תלונות</h1>
-            <P>מערכת זו מאפשרת שליחת תלונות בצורה מסודת ומעקב אחר הטיפול בהן. <br />ניתן לשלוח תלונה באופן פשוט ומהיר דרך הטופס הייעודי</P>
+            <p>מערכת זו מאפשרת שליחת תלונות בצורה מסודת ומעקב אחר הטיפול בהן. <br />ניתן לשלוח תלונה באופן פשוט ומהיר דרך הטופס הייעודי</p>
             <button className='primary-btn' onClick={()=>navigate('/submit')}>שליחת תלונה</button>
         </section>
         <section className='admin-section'>

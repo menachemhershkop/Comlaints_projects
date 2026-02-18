@@ -5,9 +5,12 @@ function Layout({children}) {
   return (
     <div>
       <nav className='navbar'>
-        <Link to='/'>Home</Link>
-        <Link to='/submit'>Submit Complaint</Link>
-        <Link to='/admin/login'>Admin</Link>
+        <button>
+        <Link to='/'>Home</Link></button>
+        <button>
+        <Link to='/submit'>Submit Complaint</Link></button>
+        <button>
+        <Link to='/admin/login'>Admin</Link></button>
       </nav>
 
       <main className='container'>{children}</main>

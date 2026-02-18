@@ -52,15 +52,15 @@ function ComplaintForm() {
         <h1>שליחת תלונה אנונימית</h1>
       {success && (<div className='success-message'>התלונה נשלחה בהצלחה!</div>)}
       <form onSubmit={handleSubmit}>
-        <label>קטגוריה</label>
+        <label>קטגוריה</label><br />
         <select name="category" value={formData.category} onChange={handleChange}>
             <option value="אוכל">אוכל</option>
             <option value="ציוד">ציוד</option>
             <option value="פקודות">פקודות</option>
             <option value="אחר">אחר</option>
-        </select>
-        <label>תוכן התלנה</label>
-        <textarea name="content" value={formData.content} onChange={handleChange} rows='6' placeholder='כתוב כאן את פרטי התלונה...'></textarea>
+        </select><br />
+        <label>תוכן התלנה</label><br />
+        <textarea name="content" value={formData.content} onChange={handleChange} rows='6' placeholder='כתוב כאן את פרטי התלונה...'></textarea><br />
 
         {error && <div className='error-message'>{error}</div>}
         <button type='submit' disabled={loading}>

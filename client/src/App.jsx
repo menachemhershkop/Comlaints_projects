@@ -18,13 +18,13 @@ function App() {
         <Route path='/' element={<HomePage/>}></Route>
         <Route path='/submit' element={<SubmitComplaintPage/>}></Route>
         <Route path='/admin/login' element={<AdminLoginPage/>}></Route>
-        <Route path='/admin/complaints' element={<AdminComplaintsPage/>}></Route>
+        <Route path='/admin/complaints' element={<ProtectedRoute><AdminComplaintsPage/></ProtectedRoute>}></Route>
         <Route path='*' element={<ErrorPage/>}></Route>
                 
       </Routes>
     </Layout>
     
-
+    
     </>
   )
 }

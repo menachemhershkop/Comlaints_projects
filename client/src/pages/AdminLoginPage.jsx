@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
-import { createComplaint } from '../api/complaintsApi';
+import { adminConnect } from '../api/complaintsApi';
 
 function AdminLoginPage() {
     const navigate = useNavigate();
@@ -18,7 +18,7 @@ function AdminLoginPage() {
         }
         try{
             setLoading(true);
-            const res = await createComplaint({password})
+            const res = await adminConnect({password})
             localStorage.setItem('admintoken', res.data.token)
             navigate('/admin/complaints')
         } catch (err){

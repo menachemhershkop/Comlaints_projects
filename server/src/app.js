@@ -17,10 +17,10 @@ const db = await connectMango({
 const complaints = db.collection('soliderComplaient');
 
 app.post('/api/complaints', (req,res)=>{
-    const {category, message} = req.body;
+    const {category, content} = req.body;
     try{
-    complaints.insertOne({category:category, message:message, 'createdAt':Date()})
-     res.send('Complaient send', category, message)
+    complaints.insertOne({category:category, content:content, 'createdAt':Date()})
+     res.send('Complaient send', category, content)
     } catch(err){
         res.send('Somthing worng...');
     };

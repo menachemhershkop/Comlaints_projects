@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getAllComplaints } from '../api/complaintsApi';
+// import { getAllComplaints } from '../api/complaintsApi';
 
 function AdminComplaintsPage() {
     const [complaints, setComplaints] = useState([]);

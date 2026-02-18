@@ -1,15 +1,24 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api"
+  baseURL: "http://localhost:8080/api"
 });
 
-export const createComplaint = (data) => {
-  return API.post("/complaints", data);
+ export async function  adminConnect(data) {
+  return await axios.post("http://localhost:8080/api/admin/login", data);
+};
+export async function createComplaint(data){
+  console.log(data);
+  
+  return await axios.post("http://localhost:8080/api/complaints", data);
+  
+  
 };
 
 export const getAllComplaints = (token) => {
   return axios.get("/admin/complaints", {
-    headers: { Authorization: `Bearer ${token}` }
+    headers: { authorization: ` ${token}` }
   });
 };
+
+//
